@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import { useState, useEffect } from 'react';
@@ -47,23 +48,13 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between h-[72px]">
             <Link href="/" className="flex items-center gap-2.5 group">
-              <div
-                className="relative w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110"
-                style={
-                  isTransparent
-                    ? {
-                        background: 'rgba(255,255,255,0.12)',
-                        backdropFilter: 'blur(8px)',
-                        border: '1px solid rgba(255,255,255,0.2)',
-                      }
-                    : {
-                        background: 'linear-gradient(135deg, #1B365D, #2563EB)',
-                        boxShadow: '0 4px 12px rgba(37,99,235,0.25)',
-                      }
-                }
-              >
-                <span className="text-white font-bold text-base">R</span>
-              </div>
+              <Image
+                src="/logo.png"
+                alt="RateMyIntern"
+                width={36}
+                height={36}
+                className="transition-all duration-300 group-hover:scale-110"
+              />
               <span className={`font-display font-semibold text-lg tracking-tight transition-colors duration-300 ${
                 isTransparent ? 'text-white' : 'text-slate-900'
               }`}>
@@ -170,7 +161,7 @@ export default function Header() {
                 <svg className="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
-                Home
+                {t('home')}
               </Link>
               <Link
                 href="/companies"

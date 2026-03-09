@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import StarRating from './StarRating';
 import type { Review } from '@/lib/supabase';
@@ -12,6 +13,10 @@ interface ReviewCardProps {
 
 export default function ReviewCard({ review, companyName, showCompany = false }: ReviewCardProps) {
   const t = useTranslations();
+  const [helpfulCount, setHelpfulCount] = useState(review.helpful_count);
+  const [hasVoted, setHasVoted] = useState(false);
+  const [hasReported, setHasReported] = useState(false);
+  const [voting, setVoting] = useState(false);
 
   const averageRating = (
     review.rating_mentorship +
@@ -31,6 +36,47 @@ export default function ReviewCard({ review, companyName, showCompany = false }:
     if (rating >= 3) return 'text-amber-600';
     return 'text-red-500';
   };
+
+  async function handleHelpful() {
+    if (hasVoted || voting) return;
+    setVoting(true);
+    setHelpfulCount((c) => c + 1);
+    setHasVoted(true);
+
+    try {
+      const res = await fetch('/api/reviews/helpful', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ reviewId: review.id }),
+      });
+      if (!res.ok) {
+        setHelpfulCount((c) => c - 1);
+        setHasVoted(false);
+      }
+    } catch {
+      setHelpfulCount((c) => c - 1);
+      setHasVoted(false);
+    } finally {
+      setVoting(false);
+    }
+  }
+
+  async function handleReport() {
+    if (hasReported) return;
+
+    try {
+      const res = await fetch('/api/reviews/report', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ reviewId: review.id }),
+      });
+      if (res.ok) {
+        setHasReported(true);
+      }
+    } catch {
+      // silent fail
+    }
+  }
 
   return (
     <div className="card p-6 md:p-7">
@@ -77,7 +123,7 @@ export default function ReviewCard({ review, companyName, showCompany = false }:
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
               </svg>
-              Recommended
+              {t('common.recommended')}
             </span>
           )}
         </div>
@@ -168,15 +214,31 @@ export default function ReviewCard({ review, companyName, showCompany = false }:
           <span>{formatDate(review.created_at)}</span>
         </div>
         <div className="flex items-center gap-2">
-          <button className="flex items-center gap-1.5 text-slate-400 hover:text-blue-600 transition-colors px-2.5 py-1.5 rounded-lg hover:bg-blue-50">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button
+            onClick={handleHelpful}
+            disabled={hasVoted}
+            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-colors ${
+              hasVoted
+                ? 'text-blue-600 bg-blue-50 cursor-default'
+                : 'text-slate-400 hover:text-blue-600 hover:bg-blue-50'
+            }`}
+          >
+            <svg className="w-4 h-4" fill={hasVoted ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
             </svg>
             <span className="text-xs font-medium">{t('common.helpful')}</span>
-            {review.helpful_count > 0 && <span className="text-xs">({review.helpful_count})</span>}
+            {helpfulCount > 0 && <span className="text-xs">({helpfulCount})</span>}
           </button>
-          <button className="text-slate-400 hover:text-red-500 transition-colors px-2.5 py-1.5 rounded-lg hover:bg-red-50 text-xs font-medium">
-            {t('common.report')}
+          <button
+            onClick={handleReport}
+            disabled={hasReported}
+            className={`px-2.5 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+              hasReported
+                ? 'text-red-500 bg-red-50 cursor-default'
+                : 'text-slate-400 hover:text-red-500 hover:bg-red-50'
+            }`}
+          >
+            {hasReported ? '✓ ' : ''}{t('common.report')}
           </button>
         </div>
       </div>

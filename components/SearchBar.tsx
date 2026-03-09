@@ -56,13 +56,13 @@ export default function SearchBar({ variant = 'default' }: SearchBarProps) {
                 boxShadow: '0 4px 14px -3px rgba(37,99,235,0.35)',
               }}
             >
-              Search
+              {t('searchBtn')}
             </button>
           </div>
         </div>
 
         <div className="flex flex-wrap gap-2 mt-4">
-          <span className="text-sm font-medium" style={{ color: 'rgba(147,197,253,0.5)' }}>Popular:</span>
+          <span className="text-sm font-medium" style={{ color: 'rgba(147,197,253,0.5)' }}>{t('popular')}</span>
           {['Google', 'Shopify', 'Desjardins', 'Microsoft'].map((company) => (
             <button
               key={company}
@@ -96,10 +96,11 @@ export default function SearchBar({ variant = 'default' }: SearchBarProps) {
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           placeholder={t('search')}
-          className="input pl-12 pr-24"
+          className="input"
+          style={{ paddingLeft: '3rem', paddingRight: '6rem' }}
         />
         <svg
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5"
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 pointer-events-none"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -115,7 +116,7 @@ export default function SearchBar({ variant = 'default' }: SearchBarProps) {
             boxShadow: '0 2px 8px rgba(37,99,235,0.2)',
           }}
         >
-          Search
+          {t('searchBtn')}
         </button>
       </div>
     </form>

@@ -4,6 +4,8 @@
     "tagline": "Avis anonymes sur les stages, par les étudiants, pour les étudiants",
     "submitReview": "Soumettre un avis",
     "search": "Rechercher des entreprises...",
+    "searchBtn": "Rechercher",
+    "popular": "Populaires :",
     "companies": "Entreprises",
     "about": "À propos",
     "language": "Langue",
@@ -11,18 +13,63 @@
     "report": "Signaler",
     "loading": "Chargement...",
     "error": "Une erreur est survenue",
-    "retry": "Réessayer"
+    "retry": "Réessayer",
+    "home": "Accueil",
+    "recommended": "Recommandé",
+    "remote": "Télétravail",
+    "reviews": "avis"
   },
   "home": {
     "hero": {
       "title": "Trouvez votre stage idéal",
       "subtitle": "Lisez des avis honnêtes de vrais stagiaires. 100% anonyme.",
       "cta": "Parcourir les entreprises",
-      "submitCta": "Partagez votre expérience"
+      "submitCta": "Partagez votre expérience",
+      "anonymous": "Avis 100% anonymes",
+      "scroll": "Défiler"
     },
     "topCompanies": "Entreprises les mieux notées",
     "recentReviews": "Avis récents",
-    "viewAll": "Voir tout"
+    "viewAll": "Voir tout",
+    "stats": {
+      "reviews": "Avis",
+      "companies": "Entreprises",
+      "recommend": "Recommandent",
+      "free": "Gratuit",
+      "forever": "Pour toujours"
+    },
+    "howItWorks": {
+      "badge": "Processus simple",
+      "title": "Comment ça marche",
+      "step1Title": "Vérifiez votre courriel",
+      "step1Desc": "Utilisez votre courriel universitaire pour recevoir un lien magique. Aucun mot de passe nécessaire.",
+      "step2Title": "Notez et évaluez",
+      "step2Desc": "Partagez votre expérience de stage à travers 5 catégories de notation.",
+      "step3Title": "Aidez les étudiants",
+      "step3Desc": "Votre avis anonyme aide des milliers d'étudiants à choisir le bon stage."
+    },
+    "discover": "Découvrir",
+    "freshTakes": "Avis récents",
+    "voiceMatters": "Votre voix compte",
+    "empty": {
+      "companiesTitle": "Soyez le premier à évaluer",
+      "companiesDesc": "Aucune entreprise évaluée pour le moment. Partagez votre expérience de stage et aidez vos camarades !",
+      "companiesCta": "Soumettre le premier avis",
+      "reviewsTitle": "Aucun avis pour le moment",
+      "reviewsDesc": "Soyez le premier à partager votre expérience de stage. Ça ne prend que quelques minutes et aide des milliers d'étudiants.",
+      "reviewsCta": "Écrire un avis"
+    },
+    "floating": {
+      "company": "Votre entreprise",
+      "role": "Votre poste",
+      "quote1": "Partagez votre histoire et aidez les étudiants à choisir leur prochain stage.",
+      "industry": "Toute industrie",
+      "position": "Tout poste",
+      "quote2": "Notez le mentorat, la culture, la rémunération et plus encore dans 5 catégories.",
+      "anonymous": "100% Anonyme",
+      "verified": "Étudiants vérifiés",
+      "quote3": "La vérification par courriel universitaire garantit l'authenticité sans révéler votre identité."
+    }
   },
   "company": {
     "reviews": "avis",
@@ -48,6 +95,16 @@
       "fall": "Automne"
     },
     "noReviews": "Aucun avis pour le moment. Soyez le premier !"
+  },
+  "companies": {
+    "found": "{count} entreprises trouvées",
+    "noFilter": "Aucune entreprise trouvée pour ce filtre",
+    "clearFilter": "Effacer le filtre",
+    "dontSee": "Votre entreprise n'est pas listée ?",
+    "submitReview": "Soumettre un avis",
+    "emptyTitle": "Aucune entreprise",
+    "emptyDesc": "Soyez le premier à partager votre expérience de stage et à aider les étudiants dans leurs choix de carrière.",
+    "emptyCta": "Soumettre le premier avis"
   },
   "review": {
     "pros": "Points positifs",
@@ -119,7 +176,15 @@
     "noResults": "Aucune entreprise trouvée pour « {query} »",
     "filters": "Filtres",
     "clearFilters": "Effacer tout",
-    "resultsCount": "{count} entreprises trouvées"
+    "resultsCount": "{count} entreprises trouvées pour « {query} »",
+    "searching": "Recherche en cours...",
+    "sortRelevance": "Plus pertinents",
+    "sortRating": "Mieux notés",
+    "sortReviews": "Plus d'avis",
+    "browseAll": "Parcourir toutes les entreprises",
+    "emptyTitle": "Entrez un nom d'entreprise",
+    "emptyDesc": "Trouvez des avis de stages pour n'importe quelle entreprise",
+    "tryDifferent": "Essayez un autre terme de recherche ou parcourez toutes les entreprises"
   },
   "auth": {
     "verifying": "Vérification de votre courriel...",

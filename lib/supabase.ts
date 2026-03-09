@@ -2,14 +2,16 @@ import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
 
 // Client-side Supabase client (uses anon key, respects RLS)
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 // Server-side Supabase client (uses service role key, bypasses RLS)
 // Only use this in API routes and server components
-export const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey);
+export const supabaseAdmin = supabaseServiceKey
+  ? createClient(supabaseUrl, supabaseServiceKey)
+  : supabase;
 
 // Database types (will be generated from Supabase later)
 export type Company = {
@@ -63,10 +65,11 @@ export type EmailToken = {
   expires_at: string;
 };
 
-// Helper to get company logo from Clearbit
+// Helper to get company logo URL
 export function getCompanyLogo(domain: string | null): string {
   if (!domain) return '/placeholder-company.svg';
-  return `https://logo.clearbit.com/${domain}`;
+  const token = process.env.NEXT_PUBLIC_LOGO_DEV_TOKEN || 'pk_X-1ZO13GSgeOoUrIuJ6GMQ';
+  return `https://img.logo.dev/${domain}?token=${token}&size=80&format=png`;
 }
 
 // Calculate average rating from review

@@ -4,6 +4,8 @@
     "tagline": "Anonymous internship reviews by students, for students",
     "submitReview": "Submit a Review",
     "search": "Search companies...",
+    "searchBtn": "Search",
+    "popular": "Popular:",
     "companies": "Companies",
     "about": "About",
     "language": "Language",
@@ -11,18 +13,63 @@
     "report": "Report",
     "loading": "Loading...",
     "error": "Something went wrong",
-    "retry": "Try again"
+    "retry": "Try again",
+    "home": "Home",
+    "recommended": "Recommended",
+    "remote": "Remote",
+    "reviews": "reviews"
   },
   "home": {
     "hero": {
       "title": "Find your perfect internship",
       "subtitle": "Read honest reviews from real interns. 100% anonymous.",
       "cta": "Browse Companies",
-      "submitCta": "Share Your Experience"
+      "submitCta": "Share Your Experience",
+      "anonymous": "100% Anonymous Reviews",
+      "scroll": "Scroll"
     },
     "topCompanies": "Top Rated Companies",
     "recentReviews": "Recent Reviews",
-    "viewAll": "View All"
+    "viewAll": "View All",
+    "stats": {
+      "reviews": "Reviews",
+      "companies": "Companies",
+      "recommend": "Recommend",
+      "free": "Free",
+      "forever": "Forever"
+    },
+    "howItWorks": {
+      "badge": "Simple Process",
+      "title": "How it works",
+      "step1Title": "Verify Your Email",
+      "step1Desc": "Use your university email to get a magic link. No password needed.",
+      "step2Title": "Rate & Review",
+      "step2Desc": "Share your internship experience across 5 rating categories.",
+      "step3Title": "Help Students",
+      "step3Desc": "Your anonymous review helps thousands pick the right internship."
+    },
+    "discover": "Discover",
+    "freshTakes": "Fresh Takes",
+    "voiceMatters": "Your voice matters",
+    "empty": {
+      "companiesTitle": "Be the first to review",
+      "companiesDesc": "No companies reviewed yet. Share your internship experience and help fellow students!",
+      "companiesCta": "Submit the first review",
+      "reviewsTitle": "No reviews yet",
+      "reviewsDesc": "Be the first to share your internship story. It only takes a few minutes and helps thousands of students.",
+      "reviewsCta": "Write a review"
+    },
+    "floating": {
+      "company": "Your Company",
+      "role": "Your Role",
+      "quote1": "Share your story and help fellow students choose their next internship.",
+      "industry": "Any Industry",
+      "position": "Any Position",
+      "quote2": "Rate mentorship, culture, compensation and more across 5 categories.",
+      "anonymous": "100% Anonymous",
+      "verified": "Verified Students",
+      "quote3": "University email verification ensures authenticity without revealing your identity."
+    }
   },
   "company": {
     "reviews": "reviews",
@@ -48,6 +95,16 @@
       "fall": "Fall"
     },
     "noReviews": "No reviews yet. Be the first!"
+  },
+  "companies": {
+    "found": "{count} companies found",
+    "noFilter": "No companies found for this filter",
+    "clearFilter": "Clear filter",
+    "dontSee": "Don't see your company?",
+    "submitReview": "Submit a review",
+    "emptyTitle": "No companies yet",
+    "emptyDesc": "Be the first to share your internship experience and help fellow students make better career decisions.",
+    "emptyCta": "Submit the first review"
   },
   "review": {
     "pros": "Pros",
@@ -119,7 +176,15 @@
     "noResults": "No companies found for \"{query}\"",
     "filters": "Filters",
     "clearFilters": "Clear all",
-    "resultsCount": "{count} companies found"
+    "resultsCount": "{count} companies found for \"{query}\"",
+    "searching": "Searching...",
+    "sortRelevance": "Most Relevant",
+    "sortRating": "Highest Rated",
+    "sortReviews": "Most Reviews",
+    "browseAll": "Browse all companies",
+    "emptyTitle": "Enter a company name to search",
+    "emptyDesc": "Find internship reviews for any company",
+    "tryDifferent": "Try a different search term or browse all companies"
   },
   "auth": {
     "verifying": "Verifying your email...",

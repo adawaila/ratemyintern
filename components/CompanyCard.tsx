@@ -19,7 +19,7 @@ export default function CompanyCard({ company }: CompanyCardProps) {
       className="card-interactive p-5 group"
     >
       <div className="flex items-center gap-4 mb-4">
-        <div className="w-12 h-12 rounded-xl overflow-hidden bg-white flex items-center justify-center flex-shrink-0 transition-all" style={{ border: '1px solid #E2E8F0' }}>
+        <div className="w-10 h-10 overflow-hidden flex items-center justify-center flex-shrink-0 transition-all">
           {company.domain ? (
             <Image
               src={getCompanyLogo(company.domain)}
