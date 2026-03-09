@@ -1,0 +1,140 @@
+{
+  "common": {
+    "appName": "RateMyIntern",
+    "tagline": "Anonymous internship reviews by students, for students",
+    "submitReview": "Submit a Review",
+    "search": "Search companies...",
+    "companies": "Companies",
+    "about": "About",
+    "language": "Language",
+    "helpful": "Helpful",
+    "report": "Report",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try again"
+  },
+  "home": {
+    "hero": {
+      "title": "Find your perfect internship",
+      "subtitle": "Read honest reviews from real interns. 100% anonymous.",
+      "cta": "Browse Companies",
+      "submitCta": "Share Your Experience"
+    },
+    "topCompanies": "Top Rated Companies",
+    "recentReviews": "Recent Reviews",
+    "viewAll": "View All"
+  },
+  "company": {
+    "reviews": "reviews",
+    "overallRating": "Overall Rating",
+    "wouldRecommend": "would recommend",
+    "ratings": {
+      "mentorship": "Mentorship",
+      "workQuality": "Work Quality",
+      "culture": "Culture",
+      "compensation": "Compensation",
+      "returnOffer": "Return Offer Likelihood"
+    },
+    "filters": {
+      "all": "All",
+      "year": "Year",
+      "season": "Season",
+      "role": "Role",
+      "city": "City"
+    },
+    "seasons": {
+      "winter": "Winter",
+      "summer": "Summer",
+      "fall": "Fall"
+    },
+    "noReviews": "No reviews yet. Be the first!"
+  },
+  "review": {
+    "pros": "Pros",
+    "cons": "Cons",
+    "receivedOffer": "Received return offer",
+    "noOffer": "No return offer",
+    "remote": "Remote",
+    "onsite": "On-site",
+    "hourly": "/hour",
+    "monthly": "/month",
+    "unpaid": "Unpaid"
+  },
+  "submit": {
+    "title": "Share Your Internship Experience",
+    "subtitle": "Help fellow students make better decisions. Your review is 100% anonymous.",
+    "email": {
+      "label": "University Email",
+      "placeholder": "your.name@university.edu",
+      "hint": "We only accept .edu, .ca, and .fr university emails",
+      "button": "Send Magic Link",
+      "sent": "Check your email!",
+      "sentDescription": "We sent a magic link to {email}. Click it to continue."
+    },
+    "steps": {
+      "company": "Company",
+      "details": "Details",
+      "ratings": "Ratings",
+      "review": "Review"
+    },
+    "form": {
+      "selectCompany": "Select or add a company",
+      "companyName": "Company Name",
+      "roleTitle": "Job Title",
+      "roleType": "Role Type",
+      "year": "Year",
+      "season": "Season",
+      "city": "City",
+      "isRemote": "Remote position",
+      "salary": "Hourly Pay (optional)",
+      "salaryPlaceholder": "e.g., 25",
+      "wouldRecommend": "Would you recommend this internship?",
+      "receivedOffer": "Did you receive a return offer?",
+      "body": "Your Review",
+      "bodyPlaceholder": "Share your experience... What did you learn? What was the culture like?",
+      "pros": "Pros (optional)",
+      "prosPlaceholder": "Best parts of the internship",
+      "cons": "Cons (optional)",
+      "consPlaceholder": "Areas for improvement",
+      "school": "Your University (optional)",
+      "schoolHint": "Will be displayed anonymously",
+      "submit": "Submit Review",
+      "submitting": "Submitting..."
+    },
+    "success": {
+      "title": "Thank you!",
+      "description": "Your review has been submitted and is pending approval. It will be visible within 48 hours."
+    },
+    "roleTypes": {
+      "swe": "Software Engineering",
+      "design": "Design",
+      "finance": "Finance",
+      "marketing": "Marketing",
+      "data": "Data Science",
+      "other": "Other"
+    }
+  },
+  "search": {
+    "title": "Search Results",
+    "noResults": "No companies found for \"{query}\"",
+    "filters": "Filters",
+    "clearFilters": "Clear all",
+    "resultsCount": "{count} companies found"
+  },
+  "auth": {
+    "verifying": "Verifying your email...",
+    "success": "Email verified! Redirecting...",
+    "error": "Invalid or expired link",
+    "errorDescription": "Please request a new magic link."
+  },
+  "footer": {
+    "tagline": "Empowering students to make informed career decisions",
+    "links": {
+      "about": "About",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "contact": "Contact"
+    },
+    "copyright": "© {year} RateMyIntern. All rights reserved."
+  }
+}

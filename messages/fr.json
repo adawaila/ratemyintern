@@ -1,0 +1,140 @@
+{
+  "common": {
+    "appName": "RateMyIntern",
+    "tagline": "Avis anonymes sur les stages, par les étudiants, pour les étudiants",
+    "submitReview": "Soumettre un avis",
+    "search": "Rechercher des entreprises...",
+    "companies": "Entreprises",
+    "about": "À propos",
+    "language": "Langue",
+    "helpful": "Utile",
+    "report": "Signaler",
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "retry": "Réessayer"
+  },
+  "home": {
+    "hero": {
+      "title": "Trouvez votre stage idéal",
+      "subtitle": "Lisez des avis honnêtes de vrais stagiaires. 100% anonyme.",
+      "cta": "Parcourir les entreprises",
+      "submitCta": "Partagez votre expérience"
+    },
+    "topCompanies": "Entreprises les mieux notées",
+    "recentReviews": "Avis récents",
+    "viewAll": "Voir tout"
+  },
+  "company": {
+    "reviews": "avis",
+    "overallRating": "Note globale",
+    "wouldRecommend": "recommanderaient",
+    "ratings": {
+      "mentorship": "Mentorat",
+      "workQuality": "Qualité du travail",
+      "culture": "Culture",
+      "compensation": "Rémunération",
+      "returnOffer": "Probabilité d'offre de retour"
+    },
+    "filters": {
+      "all": "Tous",
+      "year": "Année",
+      "season": "Saison",
+      "role": "Poste",
+      "city": "Ville"
+    },
+    "seasons": {
+      "winter": "Hiver",
+      "summer": "Été",
+      "fall": "Automne"
+    },
+    "noReviews": "Aucun avis pour le moment. Soyez le premier !"
+  },
+  "review": {
+    "pros": "Points positifs",
+    "cons": "Points négatifs",
+    "receivedOffer": "Offre de retour reçue",
+    "noOffer": "Pas d'offre de retour",
+    "remote": "Télétravail",
+    "onsite": "Sur site",
+    "hourly": "/heure",
+    "monthly": "/mois",
+    "unpaid": "Non rémunéré"
+  },
+  "submit": {
+    "title": "Partagez votre expérience de stage",
+    "subtitle": "Aidez vos camarades à prendre de meilleures décisions. Votre avis est 100% anonyme.",
+    "email": {
+      "label": "Courriel universitaire",
+      "placeholder": "votre.nom@universite.ca",
+      "hint": "Nous acceptons uniquement les courriels universitaires .edu, .ca et .fr",
+      "button": "Envoyer le lien magique",
+      "sent": "Vérifiez votre courriel !",
+      "sentDescription": "Nous avons envoyé un lien magique à {email}. Cliquez dessus pour continuer."
+    },
+    "steps": {
+      "company": "Entreprise",
+      "details": "Détails",
+      "ratings": "Notes",
+      "review": "Avis"
+    },
+    "form": {
+      "selectCompany": "Sélectionnez ou ajoutez une entreprise",
+      "companyName": "Nom de l'entreprise",
+      "roleTitle": "Titre du poste",
+      "roleType": "Type de poste",
+      "year": "Année",
+      "season": "Saison",
+      "city": "Ville",
+      "isRemote": "Poste en télétravail",
+      "salary": "Salaire horaire (optionnel)",
+      "salaryPlaceholder": "ex: 25",
+      "wouldRecommend": "Recommanderiez-vous ce stage ?",
+      "receivedOffer": "Avez-vous reçu une offre de retour ?",
+      "body": "Votre avis",
+      "bodyPlaceholder": "Partagez votre expérience... Qu'avez-vous appris ? Comment était la culture ?",
+      "pros": "Points positifs (optionnel)",
+      "prosPlaceholder": "Les meilleurs aspects du stage",
+      "cons": "Points négatifs (optionnel)",
+      "consPlaceholder": "Points à améliorer",
+      "school": "Votre université (optionnel)",
+      "schoolHint": "Sera affiché anonymement",
+      "submit": "Soumettre l'avis",
+      "submitting": "Envoi en cours..."
+    },
+    "success": {
+      "title": "Merci !",
+      "description": "Votre avis a été soumis et est en attente d'approbation. Il sera visible dans les 48 heures."
+    },
+    "roleTypes": {
+      "swe": "Développement logiciel",
+      "design": "Design",
+      "finance": "Finance",
+      "marketing": "Marketing",
+      "data": "Science des données",
+      "other": "Autre"
+    }
+  },
+  "search": {
+    "title": "Résultats de recherche",
+    "noResults": "Aucune entreprise trouvée pour « {query} »",
+    "filters": "Filtres",
+    "clearFilters": "Effacer tout",
+    "resultsCount": "{count} entreprises trouvées"
+  },
+  "auth": {
+    "verifying": "Vérification de votre courriel...",
+    "success": "Courriel vérifié ! Redirection...",
+    "error": "Lien invalide ou expiré",
+    "errorDescription": "Veuillez demander un nouveau lien magique."
+  },
+  "footer": {
+    "tagline": "Aider les étudiants à prendre des décisions de carrière éclairées",
+    "links": {
+      "about": "À propos",
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation",
+      "contact": "Contact"
+    },
+    "copyright": "© {year} RateMyIntern. Tous droits réservés."
+  }
+}

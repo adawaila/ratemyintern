@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# screenshots & test artifacts
+screenshot_*.png
+test_screenshots.py
+
+# claude
+.claude*
+CLAUDE*
